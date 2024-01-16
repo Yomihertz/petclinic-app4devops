@@ -6,7 +6,7 @@ pipeline {
     environment {
         NEXUS_USER = credentials('nexus-username')
         NEXUS_PASSWORD = credentials('nexus-password')
-        NEXUS_REPO = credentials('nexus-ip-repo')
+        NEXUS_REPO = credentials('nexus-repo')
     }
     stages{
         stage('Code Analysis') {
