@@ -2,7 +2,7 @@ FROM openjdk:8-jre-slim
 FROM ubuntu
 FROM tomcat
 #copy war file on the container
-COPY */.war /usr/local/tomcat/webapps
+COPY **/*.war /usr/local/tomcat/webapps
 WORKDIR  /usr/local/tomcat/webapps
 RUN apt update -y && apt install curl -y
 RUN curl -O https://download.newrelic.com/newrelic/java-agent/newrelic-agent/current/newrelic-java.zip && \
